@@ -1,0 +1,6 @@
+# ML / embeddings — install after requirements-core.txt (includes torch CPU).
+# Pin transformers<4.52 avoids NameError: nn is not defined on import without torch loaded first.
+torch>=2.2.0,<3
+transformers>=4.41.0,<4.52.0
+sentence-transformers>=3.0.1,<4.0.0
+numpy>=1.26,<2

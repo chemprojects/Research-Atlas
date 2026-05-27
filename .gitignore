@@ -1,0 +1,26 @@
+# Bundled Python runtime (built on M1 before release; skeleton dir is committed)
+src-tauri/bundled/python/bin/
+src-tauri/bundled/python/lib/
+src-tauri/bundled/python/include/
+src-tauri/bundled/python/share/
+src-tauri/bundled/python/libexec/
+build/cache/
+
+# Rust / Tauri
+src-tauri/target/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Python
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# App data (local dev)
+.research_atlas/
+
+# OS
+.DS_Store

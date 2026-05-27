@@ -1,0 +1,282 @@
+/**
+ * Research Atlas — theme tokens & semantic UI classes.
+ * Use semantic classes (text-fg, tag-success, code-inline) instead of raw Tailwind
+ * gray/green/amber utilities so Light/Dark stay readable.
+ */
+
+/* ── Dark (default) ───────────────────────────────────────────────────────── */
+html[data-theme="dark"],
+html[data-theme="darker"],
+html[data-theme="midnight"] {
+  --text-1: #f3f4f6;
+  --text-2: #e5e7eb;
+  --text-3: #d1d5db;
+  --text-4: #9ca3af;
+  --text-5: #6b7280;
+  --text-6: #4b5563;
+
+  --accent-fg: #c4b5fd;
+  --accent-fg-strong: #a78bfa;
+  --accent-bg: rgba(167, 139, 250, 0.15);
+  --accent-border: rgba(167, 139, 250, 0.35);
+
+  --primary-fg: #a5b4fc;
+  --primary-fg-strong: #818cf8;
+  --primary-bg: rgba(99, 102, 241, 0.12);
+  --primary-border: rgba(99, 102, 241, 0.35);
+
+  --success-fg: #86efac;
+  --success-bg: rgba(34, 197, 94, 0.12);
+  --success-border: rgba(34, 197, 94, 0.35);
+
+  --warning-fg: #fcd34d;
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  --warning-border: rgba(245, 158, 11, 0.35);
+
+  --danger-fg: #fca5a5;
+  --danger-bg: rgba(239, 68, 68, 0.12);
+  --danger-border: rgba(239, 68, 68, 0.35);
+
+  --runtime-fg: #fbbf24;
+  --runtime-bg: rgba(245, 158, 11, 0.12);
+  --runtime-border: rgba(245, 158, 11, 0.3);
+
+  --muted-bg: rgba(107, 114, 128, 0.15);
+  --muted-border: rgba(107, 114, 128, 0.35);
+  --muted-fg: #9ca3af;
+
+  --ring-subtle: rgba(255, 255, 255, 0.12);
+  --checkbox-off: #4b5563;
+}
+
+/* ── Light ──────────────────────────────────────────────────────────────────── */
+html[data-theme="light"] {
+  --text-1: #111827;
+  --text-2: #1f2937;
+  --text-3: #374151;
+  --text-4: #4b5563;
+  --text-5: #6b7280;
+  --text-6: #9ca3af;
+
+  --accent-fg: #6d28d9;
+  --accent-fg-strong: #5b21b6;
+  --accent-bg: rgba(109, 40, 217, 0.08);
+  --accent-border: rgba(109, 40, 217, 0.25);
+
+  --primary-fg: #4338ca;
+  --primary-fg-strong: #3730a3;
+  --primary-bg: rgba(99, 102, 241, 0.1);
+  --primary-border: rgba(99, 102, 241, 0.28);
+
+  --success-fg: #166534;
+  --success-bg: #dcfce7;
+  --success-border: #86efac;
+
+  --warning-fg: #92400e;
+  --warning-bg: #fef3c7;
+  --warning-border: #fcd34d;
+
+  --danger-fg: #991b1b;
+  --danger-bg: #fee2e2;
+  --danger-border: #fca5a5;
+
+  --runtime-fg: #b45309;
+  --runtime-bg: #fffbeb;
+  --runtime-border: rgba(217, 119, 6, 0.35);
+
+  --muted-bg: #f3f4f6;
+  --muted-border: #d1d5db;
+  --muted-fg: #6b7280;
+
+  --ring-subtle: rgba(17, 24, 39, 0.08);
+  --checkbox-off: #9ca3af;
+}
+
+/* ── Semantic text ────────────────────────────────────────────────────────── */
+html[data-theme] .text-fg {
+  color: var(--text-1);
+}
+html[data-theme] .text-fg-secondary {
+  color: var(--text-2);
+}
+html[data-theme] .text-fg-muted {
+  color: var(--text-4);
+}
+html[data-theme] .text-fg-faint {
+  color: var(--text-5);
+}
+html[data-theme] .text-accent {
+  color: var(--accent-fg);
+}
+html[data-theme] .text-accent-strong {
+  color: var(--accent-fg-strong);
+}
+html[data-theme] .code-inline {
+  color: var(--accent-fg);
+}
+
+/* ── Semantic tags / badges ───────────────────────────────────────────────── */
+html[data-theme] .tag-success {
+  color: var(--success-fg);
+  background-color: var(--success-bg);
+  border-color: var(--success-border);
+}
+html[data-theme] .tag-warning {
+  color: var(--warning-fg);
+  background-color: var(--warning-bg);
+  border-color: var(--warning-border);
+}
+html[data-theme] .tag-danger {
+  color: var(--danger-fg);
+  background-color: var(--danger-bg);
+  border-color: var(--danger-border);
+}
+html[data-theme] .tag-primary {
+  color: var(--primary-fg);
+  background-color: var(--primary-bg);
+  border-color: var(--primary-border);
+}
+html[data-theme] .tag-accent {
+  color: var(--accent-fg-strong);
+  background-color: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+html[data-theme] .tag-runtime {
+  color: var(--runtime-fg);
+  background-color: var(--runtime-bg);
+  border-color: var(--runtime-border);
+}
+html[data-theme] .tag-muted {
+  color: var(--muted-fg);
+  background-color: var(--muted-bg);
+  border-color: var(--muted-border);
+}
+html[data-theme] .tag-orange {
+  color: var(--runtime-fg);
+  background-color: var(--runtime-bg);
+  border-color: var(--runtime-border);
+}
+
+/* ── Panels & selection ───────────────────────────────────────────────────── */
+html[data-theme] .panel-active {
+  background-color: var(--primary-bg);
+  border-color: var(--primary-border);
+}
+html[data-theme] .panel-selectable:hover {
+  border-color: var(--primary-border);
+}
+html[data-theme] .icon-runtime {
+  color: var(--runtime-fg);
+}
+html[data-theme] .icon-accent {
+  color: var(--accent-fg);
+}
+
+/* ── Checkbox / radio ring (unselected) ─────────────────────────────────────── */
+html[data-theme] .ring-off {
+  border-color: var(--checkbox-off);
+}
+
+/* ── Alerts / banners ───────────────────────────────────────────────────────── */
+html[data-theme] .banner-warning {
+  background-color: var(--warning-bg);
+  border-bottom: 1px solid var(--warning-border);
+}
+
+/* First-run / backend setup — calm green progress (not warning styling) */
+html[data-theme] .banner-setup {
+  --setup-track: rgba(16, 185, 129, 0.15);
+  --setup-fill-a: #34d399;
+  --setup-fill-b: #6ee7b7;
+  --setup-glow: rgba(52, 211, 153, 0.35);
+  background: linear-gradient(
+    105deg,
+    rgba(6, 78, 59, 0.45) 0%,
+    rgba(16, 185, 129, 0.2) 45%,
+    rgba(6, 95, 70, 0.35) 100%
+  );
+  background-size: 220% 100%;
+  animation: setup-banner-flow 6s ease-in-out infinite;
+  border-bottom: 1px solid var(--success-border);
+  box-shadow: 0 1px 0 var(--setup-glow) inset;
+}
+html[data-theme="light"] .banner-setup {
+  --setup-track: rgba(22, 163, 74, 0.12);
+  --setup-fill-a: #22c55e;
+  --setup-fill-b: #4ade80;
+  --setup-glow: rgba(34, 197, 94, 0.2);
+  background: linear-gradient(
+    105deg,
+    #ecfdf5 0%,
+    #d1fae5 50%,
+    #ecfdf5 100%
+  );
+  background-size: 220% 100%;
+}
+html[data-theme] .banner-setup-title {
+  color: var(--success-fg);
+}
+html[data-theme] .banner-setup-message {
+  color: var(--text-3);
+}
+html[data-theme] .banner-setup-hint {
+  color: var(--text-4);
+}
+html[data-theme] .setup-progress-track {
+  background: var(--setup-track);
+}
+html[data-theme] .setup-progress-fill {
+  background: linear-gradient(90deg, var(--setup-fill-a), var(--setup-fill-b), var(--setup-fill-a));
+  background-size: 200% 100%;
+  animation: setup-progress-shimmer 2.2s ease-in-out infinite;
+  box-shadow: 0 0 12px var(--setup-glow);
+}
+html[data-theme] .setup-progress-glow {
+  box-shadow: 0 0 18px var(--setup-glow);
+}
+@keyframes setup-banner-flow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes setup-progress-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+@keyframes setup-pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+html[data-theme] .callout-warning {
+  background-color: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  color: var(--text-3);
+}
+html[data-theme] .callout-warning-title {
+  color: var(--warning-fg);
+  font-weight: 600;
+}
+html[data-theme] .callout-warning-body {
+  color: var(--text-3);
+  font-size: 0.75rem;
+  line-height: 1.625;
+}
+html[data-theme] .icon-warning {
+  color: var(--warning-fg);
+}
+html[data-theme] .text-danger-fg {
+  color: var(--danger-fg);
+}

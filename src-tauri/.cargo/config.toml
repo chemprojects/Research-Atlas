@@ -1,0 +1,7 @@
+# Cross-compile Apple Silicon app from an Intel Mac (requires Xcode CLI tools).
+[target.aarch64-apple-darwin]
+linker = "clang"
+rustflags = [
+  "-C", "link-arg=-target",
+  "-C", "link-arg=arm64-apple-macos11.0",
+]
