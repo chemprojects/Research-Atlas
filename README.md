@@ -11,10 +11,10 @@ All paper data and AI processing stay on your machine.
 ### Downloads
 
 - 🍎 macOS (Apple Silicon):  
-  [Download (.dmg)](https://github.com/{repo}/ResearchAtlas/releases/latest/download/ResearchAtlas-arm64.dmg)
+  [Download (.dmg)](https://github.com/chemprojects/Research-Atlas/releases/tag/v0.1.1)
 
 - 🪟 Windows:  
-  [Download Installer (.exe)](https://github.com/{repo}/ResearchAtlas/releases/latest/download/ResearchAtlas-Setup.exe)
+  [Download Installer (.exe)](https://github.com/chemprojects/Research-Atlas/releases/tag/v0.1.1)
 
 ### macOS launch note
 
