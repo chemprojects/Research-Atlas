@@ -177,9 +177,6 @@ Open http://localhost:1420 only if you are testing the web UI without Tauri.
 
 - Ollama requires macOS 14+. Upgrade macOS or use library/sources without LLM features.
 
-**Port 8765 in use**
-
-- Another Research Atlas instance may be running. Quit from the sidebar or Activity Monitor.
 
 **Embedding download**
 
