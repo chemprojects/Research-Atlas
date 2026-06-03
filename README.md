@@ -6,7 +6,7 @@ All paper data and AI processing stay on your machine.
 
 ---
 
-## For end users (packaged app)
+## For users
 
 ### Downloads
 
