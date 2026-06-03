@@ -162,49 +162,6 @@ cd frontend && npm run dev
 
 Open http://localhost:1420 only if you are testing the web UI without Tauri.
 
-### 5. Production build (macOS)
-
-Build on the **same kind of Mac** you want the `.app` to run on:
-
-| Build machine | App runs on |
-|---------------|-------------|
-| Intel Mac | Intel Macs |
-| Apple Silicon (M1/M2/M3/M4/M5) | Apple Silicon Macs |
-
-```bash
-bash scripts/build-release-macos.sh
-```
-
-Or step by step:
-
-```bash
-bash scripts/build-bundled-python.sh   # ~5–15 min, needs network once
-npm run build --prefix frontend
-cd src-tauri && cargo tauri build      # uses native target automatically
-```
-
-The DMG includes `Contents/Resources/python/`. End users need **no system Python**.
-
-> **Note:** An Intel build does not run natively on Apple Silicon (and vice versa) unless you ship a Universal binary — build twice and distribute two DMGs, or build each arch on matching hardware.
-
-### Build Apple Silicon `.app` on an Intel iMac
-
-```bash
-# On Intel iMac (Xcode Command Line Tools + Rust required)
-bash scripts/build-release-macos.sh arm64
-```
-
-This will:
-
-1. Download the **arm64** Python runtime and install **arm64** wheels via cross-pip (no import test on Intel).
-2. Cross-compile the Tauri shell for `aarch64-apple-darwin`.
-
-Copy the DMG from `src-tauri/target/aarch64-apple-darwin/release/bundle/macos/` to your M1, install, and run.
-
-**Easier alternative:** run the same command on the M1 Mac itself (`bash scripts/build-release-macos.sh` with no args) — no cross-compile, and import tests run during the build.
-
-**Requirements for cross-build:** `xcode-select --install`, `rustup target add aarch64-apple-darwin`, and Python 3 on the Intel Mac (for cross-pip only).
-
 ---
 
 ## Troubleshooting
