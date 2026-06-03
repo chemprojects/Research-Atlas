@@ -191,7 +191,7 @@ Open http://localhost:1420 only if you are testing the web UI without Tauri.
 ## Project structure
 
 ```
-PaperTracker/
+Research-Atlas/
 ├── backend/          FastAPI + scheduler + ingestion
 ├── frontend/         React UI
 ├── src-tauri/        Desktop shell (Research Atlas)
